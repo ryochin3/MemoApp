@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, ScrollView, Text, StyleSheet } from 'react-native';
+import {
+  View, ScrollView, Text, StyleSheet,
+} from 'react-native';
 
 import AppBar from '../components/AppBar';
 import CircleBtn from '../components/CircleBtn';
@@ -19,7 +21,7 @@ export default function MemoDetailScreen() {
           cccccccccc
         </Text>
       </ScrollView>
-      <CircleBtn style={{ top: 160, bottom: 'auto' }}>/</CircleBtn>
+      <CircleBtn style={{ top: 160, bottom: 'auto' }} name="pencil-outline" />
     </View>
   );
 }
