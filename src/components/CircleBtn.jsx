@@ -1,24 +1,27 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { string, shape } from 'prop-types';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import { string, shape, func } from 'prop-types';
+
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function CircleBtn(props) {
-  const { style, name } = props;
+  const { style, name, onPress } = props;
   return (
-    <View style={[styles.btnAdd, style]}>
+    <TouchableOpacity style={[styles.btnAdd, style]} onPress={onPress}>
       <MaterialCommunityIcons name={name} size={32} color="white" />
-    </View>
+    </TouchableOpacity>
   );
 }
 
 CircleBtn.propTypes = {
   style: shape(),
   name: string.isRequired,
+  onPress: func,
 };
 
 CircleBtn.defaultProps = {
   style: null,
+  onPress: null,
 };
 
 const styles = StyleSheet.create({

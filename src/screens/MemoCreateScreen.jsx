@@ -14,7 +14,7 @@ export default function MemoCreateScreen() {
       <View style={styles.inputContainer}>
         <TextInput value="" multiline style={styles.input} />
       </View>
-      <CircleBtn name="check" />
+      <CircleBtn name="check" onPress={() => {}} />
     </KeyboardSafeView>
   );
 }
